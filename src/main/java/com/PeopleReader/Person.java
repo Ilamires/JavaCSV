@@ -21,6 +21,19 @@ public class Person {
         this.birthdate = LocalDate.from(birthdate);
     }
 
+
+    public Person(int id, String name, String gender, String divisionName, double salary, LocalDate birthdate) {
+        if (id < 0)
+            throw new IllegalArgumentException("id have to be more or equal to 0");
+        this.id = id;
+        nextId = Math.max(id + 1, nextId);
+        this.name = name;
+        this.gender = gender;
+        this.division = new Division(divisionName);
+        this.salary = salary;
+        this.birthdate = LocalDate.from(birthdate);
+    }
+
     public int getId() {
         return id;
     }
