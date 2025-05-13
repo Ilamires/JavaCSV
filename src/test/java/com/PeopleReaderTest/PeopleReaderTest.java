@@ -15,6 +15,9 @@ public class PeopleReaderTest {
         result = result && !(peopleReader.ReadFile("foreign_names.txt")) &&
                 peopleReader.getPeople() != null;
 
+        peopleReader = new PeopleReader();
+        result = result && !peopleReader.getIsFileRead() && peopleReader.getPeople() == null;
+
         Assert.assertTrue(result);
     }
 }
