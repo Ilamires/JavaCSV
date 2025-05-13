@@ -10,9 +10,10 @@ public class PeopleReaderTest {
         boolean result;
 
         PeopleReader peopleReader = new PeopleReader("foreign_names.csv");
-        result = peopleReader.getIsFileRead();
+        result = peopleReader.getIsFileRead() && peopleReader.getPeople() != null;
 
-        result =  result && !(peopleReader.ReadFile("foreign_names.txt"));
+        result = result && !(peopleReader.ReadFile("foreign_names.txt")) &&
+                peopleReader.getPeople() != null;
 
         Assert.assertTrue(result);
     }
