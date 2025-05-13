@@ -18,4 +18,12 @@ public class Division {
     public String getName() {
         return name;
     }
+
+    @Override
+    public String toString() {
+        return "Division{" +
+                "id=" + id +
+                ", name='" + name + '\''+
+                '}';
+    }
 }

@@ -7,7 +7,7 @@ import java.util.Objects;
 
 public class DivisionTest {
     @Test
-    public void PeopleReaderReadFileTest() {
+    public void DivisionCreationTest() {
         boolean result;
 
         Division division = new Division("I");
